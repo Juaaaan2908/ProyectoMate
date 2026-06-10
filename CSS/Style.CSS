@@ -23,7 +23,7 @@ body{
     width:100%;
     height:100%;
 
-    background-image:url("/IMG/imagen1_Lab.png");
+    background-image:url("../IMG/magen1_Lab.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
