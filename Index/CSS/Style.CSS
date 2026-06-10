@@ -1,0 +1,447 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#pantallaJuego{
+    width:100vw;
+    height:100vh;
+    position:relative;
+}
+
+#fondo{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-image:url("/IMG/imagen1_Lab.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:1;
+
+    transition:1s;
+}
+
+/* HUD */
+
+#hud{
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    z-index:50;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    background:rgba(0,0,0,0.65);
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    backdrop-filter:blur(6px);
+}
+
+#puntaje{
+    margin-top:10px;
+}
+
+#llaves{
+    margin-top:10px;
+    line-height:30px;
+}
+
+/* MENU */
+
+#menuPrincipal{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:20;
+
+    text-align:center;
+
+    color:white;
+
+    background:rgba(0,0,0,0.60);
+
+    backdrop-filter:blur(8px);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    width:700px;
+}
+
+#menuPrincipal h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+#menuPrincipal p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+#btnJugar{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#btnJugar:hover{
+    transform:scale(1.1);
+}
+
+/* PREGUNTAS */
+
+#contenedorPregunta{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:100;
+}
+
+#modalPregunta{
+
+    background:rgba(10,20,40,.95);
+
+    border:2px solid #00c3ff;
+
+    width:750px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 0 30px #00c3ff;
+}
+
+#tituloSala{
+
+    color:#00c3ff;
+
+    margin-bottom:20px;
+
+    font-size:34px;
+}
+
+#pregunta{
+
+    font-size:26px;
+
+    margin-bottom:25px;
+}
+
+#opciones button{
+
+    display:block;
+
+    width:100%;
+
+    margin:10px 0;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#00334d;
+
+    color:white;
+
+    transition:.3s;
+}
+
+#opciones button:hover{
+
+    background:#00c3ff;
+
+    color:black;
+
+    transform:scale(1.03);
+}
+
+/* MENSAJE FLOTANTE */
+
+#mensajeFlotante{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:500;
+
+    background:rgba(0,0,0,.9);
+
+    color:#00ff99;
+
+    padding:30px 50px;
+
+    border-radius:15px;
+
+    font-size:35px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    box-shadow:0 0 30px #00ff99;
+}
+
+#mensajeFlotante button{
+
+    margin-top:15px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+/* TRANSICION */
+
+#transicion{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:1s;
+}
+
+#transicion.activo{
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+#historiaTransicion{
+
+    text-align:center;
+
+    max-width:800px;
+
+    color:white;
+
+    padding:20px;
+}
+
+#historiaTransicion h2{
+
+    font-size:50px;
+
+    margin-bottom:25px;
+}
+
+#textoHistoria{
+
+    font-size:24px;
+
+    line-height:1.7;
+}
+
+/* BOTON SIGUIENTE */
+
+#siguiente{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:40px;
+
+    z-index:1001;
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    animation:parpadeo 1s infinite;
+}
+
+@keyframes parpadeo{
+
+    50%{
+        opacity:.3;
+    }
+}
+
+/* UTILIDAD */
+
+.oculto{
+    display:none;
+}
+
+/* ================================= */
+/* RESPONSIVE CELULAR */
+/* ================================= */
+
+@media (max-width: 768px){
+
+    #hud{
+        top:10px;
+        left:10px;
+
+        padding:8px;
+
+        font-size:14px;
+
+        max-width:180px;
+    }
+
+    #menuPrincipal{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+    #menuPrincipal h1{
+
+        font-size:38px;
+    }
+
+    #menuPrincipal p{
+
+        font-size:18px;
+    }
+
+    #btnJugar{
+
+        width:100%;
+
+        font-size:20px;
+    }
+
+    #modalPregunta{
+
+        width:95vw;
+
+        padding:20px;
+    }
+
+    #tituloSala{
+
+        font-size:24px;
+    }
+
+    #pregunta{
+
+        font-size:20px;
+    }
+
+    #opciones button{
+
+        font-size:16px;
+
+        padding:14px;
+    }
+
+    #mensajeFlotante{
+
+        width:90%;
+
+        font-size:28px;
+
+        padding:20px;
+    }
+
+    #transicion h2{
+
+        width:90%;
+
+        font-size:22px;
+
+        text-align:center;
+    }
+
+    #siguiente{
+
+        bottom:20px;
+
+        right:20px;
+
+        font-size:18px;
+
+        padding:10px 15px;
+    }
+
+}
