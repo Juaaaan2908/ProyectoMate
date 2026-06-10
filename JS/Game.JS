@@ -26,7 +26,7 @@ class Juego {
 
             {
                 nombre: "Sumatorias",
-                imagen: "/IMG/Imagen2_Sumatorias.png",
+                imagen: "IMG/Imagen2_Sumatorias.png",
 
                 preguntas: [
 
@@ -53,7 +53,7 @@ class Juego {
 
             {
                 nombre: "Productoria",
-                imagen: "/IMG/Imagen3_Productoria.png",
+                imagen: "/IMGImagen3_Productoria.png",
 
                 preguntas: [
 
@@ -80,7 +80,7 @@ class Juego {
 
             {
                 nombre: "Inducción",
-                imagen: "/IMG/Imagen4_Induccion.png",
+                imagen: "IMG/Imagen4_Induccion.png",
 
                 preguntas: [
 
@@ -334,7 +334,7 @@ class Juego {
         document
             .getElementById("fondo")
             .style.backgroundImage =
-            "url('/IMG/Imagen5_PuertaFinal.png')";
+            "url('IMG/Imagen5_PuertaFinal.png')";
 
         this.mostrarHistoria(
 
@@ -386,7 +386,7 @@ class Juego {
         document
             .getElementById("fondo")
             .style.backgroundImage =
-            "url('/IMG/Imagen6_Victoria.png')";
+            "url('IMG/Imagen6_Victoria.png')";
 
         const mensaje =
             document.getElementById("mensajeFlotante");
@@ -409,7 +409,7 @@ class Juego {
         document
             .getElementById("fondo")
             .style.backgroundImage =
-            "url('/IMG/Imagen7_Derrota.png')";
+            "url('IMG/Imagen7_Derrota.png')";;
 
         const mensaje =
             document.getElementById("mensajeFlotante");
