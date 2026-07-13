@@ -1,112 +1,129 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Escape del Laboratorio de Euler</title>
+<title>Escape del Laboratorio de Euler</title>
 
-    <link rel="stylesheet" href="CSS/Style.css">
+<link rel="stylesheet" href="CSS/Style.css">
+```
 
 </head>
 
 <body>
 
-    <!-- Botón siguiente -->
-    <div id="siguiente" class="oculto">
-        Siguiente ➜
-    </div>
+```
+<div id="siguiente" class="oculto">
+    Siguiente ➜
+</div>
 
-    <!-- Pantalla principal -->
-    <div id="pantallaJuego">
+<div id="pantallaJuego">
 
-        <!-- Fondo dinámico -->
-        <div id="fondo"></div>
+    <div id="fondo"></div>
 
-        <!-- HUD -->
-        <div id="hud">
+    <div id="hud">
 
-            <div id="vidas">
-                ❤️❤️❤️
+        <div id="vidas">
+            ❤️❤️❤️
+        </div>
+
+        <div id="puntaje">
+            Puntaje: 0
+        </div>
+
+        <div id="progreso">
+            Progreso: 0%
+        </div>
+
+        <div id="llaves">
+
+            <div id="llaveSumatoria">
+                🔒 Sumatoria
             </div>
 
-            <div id="puntaje">
-                Puntaje: 0
+            <div id="llaveProductoria">
+                🔒 Productoria
             </div>
 
-            <div id="llaves">
-
-                <div id="llaveSumatoria">
-                    🔒 Sumatoria
-                </div>
-
-                <div id="llaveProductoria">
-                    🔒 Productoria
-                </div>
-
-                <div id="llaveInduccion">
-                    🔒 Inducción
-                </div>
-
+            <div id="llaveInduccion">
+                🔒 Inducción
             </div>
 
         </div>
 
-        <!-- Menú principal -->
-        <div id="menuPrincipal">
+    </div>
 
-            <h1>Escape del Laboratorio de Euler</h1>
+    <div id="menuPrincipal">
 
-            <p>
-                Encuentra las tres llaves matemáticas para escapar del laboratorio.
+        <h1>Escape del Laboratorio de Euler</h1>
+
+        <p>
+            Encuentra las tres llaves matemáticas y escapa del laboratorio.
+        </p>
+
+        <div id="instrucciones">
+
+            <h3>Instrucciones</h3>
+
+            <p>❤️ Tienes 3 vidas.</p>
+
+            <p>✅ Cada respuesta correcta suma 100 puntos.</p>
+
+            <p>❌ Cada respuesta incorrecta resta una vida y 25 puntos.</p>
+
+            <p>🔑 Consigue las tres llaves para abrir la puerta final.</p>
+
+            <p>🏆 Escapa del laboratorio para ganar.</p>
+
+        </div>
+
+        <button id="btnJugar">
+            Jugar
+        </button>
+
+    </div>
+
+    <div id="contenedorPregunta" class="oculto">
+
+        <div id="modalPregunta">
+
+            <h2 id="tituloSala"></h2>
+
+            <p id="pregunta"></p>
+
+            <div id="opciones"></div>
+
+        </div>
+
+    </div>
+
+    <div id="mensajeFlotante" class="oculto">
+        Mensaje
+    </div>
+
+    <div id="transicion">
+
+        <div id="historiaTransicion">
+
+            <h2>Historia</h2>
+
+            <p id="textoHistoria">
+                Año 2085. Has despertado dentro del Laboratorio de Euler...
             </p>
 
-            <button id="btnJugar">
-                Jugar
-            </button>
-
-        </div>
-
-        <!-- Preguntas -->
-        <div id="contenedorPregunta" class="oculto">
-
-            <div id="modalPregunta">
-
-                <h2 id="tituloSala"></h2>
-
-                <p id="pregunta"></p>
-
-                <div id="opciones"></div>
-
-            </div>
-
-        </div>
-
-        <!-- Mensajes flotantes -->
-        <div id="mensajeFlotante" class="oculto">
-            Mensaje
-        </div>
-
-        <!-- Pantalla de historia / transición -->
-        <div id="transicion">
-
-            <div id="historiaTransicion">
-
-                <h2>Historia</h2>
-
-                <p id="textoHistoria">
-                    Despiertas dentro del Laboratorio de Euler...
-                </p>
-
-            </div>
-
         </div>
 
     </div>
 
-    <script src="JS/Game.js"></script>
+</div>
+
+<script src="JS/Game.js"></script>
+```
 
 </body>
 

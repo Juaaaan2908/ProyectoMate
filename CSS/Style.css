@@ -343,7 +343,66 @@ body{
     }
 }
 
-/* UTILIDAD */
+#progreso{
+margin-top:10px;
+color:#00ff99;
+}
+
+
+
+#instrucciones{
+
+
+margin:25px 0;
+
+padding:20px;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.08);
+
+text-align:left;
+
+
+}
+
+#instrucciones h3{
+
+
+text-align:center;
+
+margin-bottom:15px;
+
+color:#00c3ff;
+
+
+}
+
+#instrucciones p{
+margin:8px 0;
+}
+
+.llaveAnimada{
+animation:brillo 1s ease-in-out;
+}
+
+@keyframes brillo{
+
+
+0%{
+    transform:scale(1);
+}
+
+50%{
+    transform:scale(1.4);
+}
+
+100%{
+    transform:scale(1);
+}
+
+}
+
 
 .oculto{
     display:none;
