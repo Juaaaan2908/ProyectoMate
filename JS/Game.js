@@ -27,19 +27,19 @@ class Juego {
                     {
                         pregunta: "Calcule el valor de: Σ (k² - 2k) desde k=1 hasta k=6",
                         opciones: ["65", "49", "71", "55"],
-                        correcta: 1, // El índice 1 es "49"
+                        correcta: 1, 
                         explicacion: "Evaluando k de 1 a 6 obtenemos los términos: (1-2) + (4-4) + (9-6) + (16-8) + (25-10) + (36-12) = -1 + 0 + 3 + 8 + 15 + 24 = 49."
                     },
                     {
                         pregunta: "Calcule el valor de la sumatoria: Σ (3k + 5) desde k=4 hasta k=9",
                         opciones: ["132", "147", "114", "126"],
-                        correcta: 1, // El índice 1 es "147"
+                        correcta: 1, 
                         explicacion: "Es una progresión aritmética de 6 términos. Para k=4 da 17 y para k=9 da 32. Usando la fórmula de la suma: 6 * (17 + 32) / 2 = 3 * 49 = 147."
                     },
                     {
                         pregunta: "Si Σ (k³) desde k=1 hasta n es igual a 3025, ¿cuál es el valor de n?",
                         opciones: ["9", "10", "11", "12"],
-                        correcta: 1, // El índice 1 es "10"
+                        correcta: 1, 
                         explicacion: "La fórmula es [n(n+1)/2]². Al sacar raíz cuadrada a 3025 obtenemos 55. Resolviendo n(n+1)/2 = 55, vemos que 10 * 11 / 2 = 55. Por lo tanto, n = 10."
                     }
                 ]
